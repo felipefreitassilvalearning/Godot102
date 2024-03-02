@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://du0vqfvq1tm3n"]
+[gd_scene load_steps=10 format=3 uid="uid://du0vqfvq1tm3n"]
 
 [ext_resource type="Texture2D" uid="uid://cn8p4d5pxxx7f" path="res://Green.png" id="1_14dta"]
 [ext_resource type="Texture2D" uid="uid://cxid1p8yyqnrt" path="res://Terrain (16x16).png" id="2_h6ho7"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cd5rei8vnp470" path="res://scenes/collectible.tscn" id="4_d2gkc"]
 [ext_resource type="Script" path="res://game_manager.gd" id="5_fg1by"]
 [ext_resource type="PackedScene" uid="uid://bhiq5ls5p0mym" path="res://scenes/end_trophy.tscn" id="6_rtj6a"]
+[ext_resource type="PackedScene" uid="uid://bavflxnc7wc4a" path="res://scenes/level_2.tscn" id="7_jq0xu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1cqvp"]
 texture = ExtResource("2_h6ho7")
@@ -636,7 +637,8 @@ position = Vector2(1313, 645)
 position = Vector2(1377, 645)
 
 [node name="EndTrophy" parent="SceneObjects" instance=ExtResource("6_rtj6a")]
-position = Vector2(2144, 211)
+position = Vector2(2142, 210)
+target_level = ExtResource("7_jq0xu")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -655,6 +657,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
-text = "Points: 0"
+text = "Points: 0 / 1"
 horizontal_alignment = 1
 vertical_alignment = 1
